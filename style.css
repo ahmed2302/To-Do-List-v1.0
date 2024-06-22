@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.3s;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 20px auto;
+  background: #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0 10px black;
+}
+.container .input {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container .input input {
+  flex: 1;
+  height: 50px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: orangered;
+  padding: 0 0 0 10px;
+  border: 1px solid orangered;
+}
+.container .input input:focus {
+  outline: none;
+}
+.container .input input::placeholder {
+  color: orangered;
+  font-weight: bold;
+}
+.container .input button {
+  width: 150px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: bold;
+  color: orangered;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 10px 0;
+  border: 1px solid orangered;
+}
+
+.container .input button:hover {
+  background-color: orangered;
+  color: white;
+}
+.container .list {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: relative;
+}
+.container .list .task {
+  background-color: #333;
+  padding: 30px 0;
+  position: relative;
+  font-size: 25px;
+  border-radius: 8px;
+  display: block;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+  min-width: 250px;
+  height: 250px;
+  text-transform: capitalize;
+  flex: 1;
+  overflow: auto;
+}
+.container .list .task .title {
+  color: orangered;
+  text-align: center;
+  padding: 0 20px;
+}
+.container .list .task .body {
+  color: white;
+  padding: 20px;
+}
+.container .list .task.done,
+.container .list .task:hover {
+  background-color: #212121;
+}
+.container .list .task .time {
+  position: absolute;
+  font-size: 14px;
+  top: 5px;
+  left: 10px;
+}
+.container .list .task .date {
+  position: absolute;
+  font-size: 14px;
+  top: 5px;
+  right: 30px;
+}
+.container .list .task .time:hover,
+.container .list .task .date:hover {
+  color: orangered;
+}
+.container .list .task .del {
+  position: absolute;
+  font-size: 14px;
+  right: 0;
+  top: 0;
+  color: white;
+  width: 25px;
+  height: 25px;
+  background: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.container .list .task .del:hover {
+  background-color: red;
+}
+.container .list .clear {
+  background-color: orangered;
+  padding: 8px 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  width: fit-content;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 0;
+}
+.container .list .clear:hover {
+  background-color: red;
+}
